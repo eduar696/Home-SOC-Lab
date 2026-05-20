@@ -9,11 +9,6 @@ El laboratorio está compuesto por dos nodos principales conectados en una red l
   - IP:162.168.0.188
   - Función: Endpoint de monitoreo y generación de eventos.
 
-## Diagrama de Conectividad
-
-
-
-
 
 ## Validación de Conectividad
 Se ha verificado la comunicación bidireccional entre el Nodo Manager y el Nodo Agente mediante pruebas de ICMP (ping).
