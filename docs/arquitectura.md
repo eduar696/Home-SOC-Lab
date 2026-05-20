@@ -30,5 +30,5 @@ Se ha verificado la comunicación bidireccional entre el Nodo Manager y el Nodo 
 ![Validación IP Windows](Validación%20de%20IP%20Windows%207.jpg)
 
 **Nodo Manager (Ubuntu):**
-![Validación IP Ubuntu](validar_ip.jpg)
+![Validación IP Ubuntu](Validación de IP Ubuntu.jpg)
 
