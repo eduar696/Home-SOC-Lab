@@ -15,7 +15,7 @@ Componentes de Gestión
     Wazuh Dashboard: Interfaz web para la visualización de datos y respuesta ante incidentes.
 
     Estado del Servicio: El servidor se encuentra operativo y validado mediante systemctl status wazuh-manager, garantizando la ingesta continua de eventos.
-<img width="700" height="600" alt="status wazuh-manager" src="https://github.com/user-attachments/assets/83ab7335-94ce-42a2-9506-4cbe74b935f3" />
+<img width="700" alt="status wazuh-manager" src="https://github.com/user-attachments/assets/83ab7335-94ce-42a2-9506-4cbe74b935f3" />
 
 
     
