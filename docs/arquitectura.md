@@ -28,10 +28,15 @@ Se ha verificado la comunicación bidireccional entre el Nodo Manager y el Nodo 
 <img src="ip_ubuntu.jpg" width="600">)
 
 
-## Fase 2: Despliegue de Wazuh Manager
-Se ha completado la instalación de Wazuh Manager y Dashboard en un entorno Ubuntu. 
-A continuación se muestra la interfaz operativa:
-![Wazuh Dashboard](wazuh_dashboard_ready1.png)
-![Wazuh Dashboard](wazuh_dashboard_ready2.png)
+<h2>Fase 2: Despliegue de Wazuh Manager</h2>
+<p>Se ha completado la instalación de Wazuh Manager y Dashboard en un entorno Ubuntu. 
+A continuación se muestra la interfaz operativa del sistema:</p>
+
+<div style="display: flex; gap: 10px; margin-bottom: 20px;">
+    <img src="wazuh_dashboard_ready1.png" alt="Wazuh Dashboard Vista 1" width="45%">
+    <img src="wazuh_dashboard_ready2.png" alt="Wazuh Dashboard Vista 2" width="45%">
+</div>
+
+<p><em>En estas capturas se observa el panel de control centralizado tras la finalización del asistente de instalación.</em></p>
 
 
