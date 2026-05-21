@@ -21,9 +21,9 @@ Se ha verificado la comunicación bidireccional entre el Nodo Manager y el Nodo 
 
 ### Evidencia de Configuración de Red
 
-**Nodo Agente (Windows 7):**
+**Nodo Agente (Windows 7):Nota: El entorno utiliza asignación dinámica de IPs (DHCP) para fines de pruebas**
 <img src="Validación de IP Windows 7.jpg" width="600">
-Nota: El entorno utiliza asignación dinámica de IPs (DHCP) para fines de pruebas.
+
 **Nodo Manager (Ubuntu):**
 <img src="ip_ubuntu.jpg" width="600">)
 
