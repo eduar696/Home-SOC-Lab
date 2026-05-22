@@ -16,7 +16,7 @@ Se ha verificado la comunicación bidireccional entre el Nodo Manager y el Nodo 
 - **Estado:** Conexión establecida.
 - **Evidencia:** Ver anexos de configuración de red.
 
-### Evidencia de Red### 
+
 
 
 ### Evidencia de Configuración de Red
@@ -33,6 +33,10 @@ Se ha verificado la comunicación bidireccional entre el Nodo Manager y el Nodo 
 
 <img src="ip_ubuntu.jpg" width="900">)
 **Nodo Manager (Ubuntu):**
+##Verificación de Red (Servidor Host - Ubuntu)
+**Comando ejecutado:ip a**
+
+**Resultado:** El sistema confirmó la interfaz física enp2s0 activa con la dirección IP 192.168.0.179 asignada mediante DHCP. Esta dirección IP servirá como punto central para la gestión y despliegue de los agentes del laboratorio (Wazuh).
 
 <h2>Fase 2: Despliegue de Wazuh Manager</h2>
 <p>Se ha completado la instalación de Wazuh Manager y Dashboard en un entorno Ubuntu. 
