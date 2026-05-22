@@ -1,43 +1,42 @@
 # Arquitectura del SOC Lab
 
-## Topología de Red
+## 1. Topología de Red
 El laboratorio está compuesto por dos nodos principales conectados en una red local virtualizada/física.
 
-- **Nodo Manager (Ubuntu Server):** - IP:192.168.0.184
+- **Nodo Manager (Ubuntu Server):** - IP: 192.168.0.173
   - Función: Wazuh Manager, Servidor de Logs, Dashboard.
 - **Nodo Agente (Windows 7):**
-  - IP:162.168.0.188
+  - IP: 192.168.0.188
   - Función: Endpoint de monitoreo y generación de eventos.
 
 **Nota: Las direcciones IP asignadas son dinámicas (DHCP) y fueron validadas durante la configuración inicial de los equipos.**
 
-## Validación de Conectividad
-Se ha verificado la comunicación bidireccional entre el Nodo Manager y el Nodo Agente mediante pruebas de ICMP (ping).
-
-- **Estado:** Conexión establecida.
-- **Evidencia:** Ver anexos de configuración de red.
-
-
-
+## 2. Validación de Conectividad
+Se ha verificado la comunicación bidireccional entre el Nodo Manager y el Nodo Agente.
 
 ### Evidencia de Configuración de Red
-
-
-
-<img src="Validación de IP Ubuntu Server.jpg" width="900">)
-**Nodo Agente (Windows 7)**
-
-**Comando utilizado:** ip a (utilizado para listar las interfaces de red y verificar la configuración IP asignada).
-
-**Resultado:** Se confirma la asignación dinámica de la dirección IP 192.168.0.173 a través del protocolo DHCP, estableciendo la comunicación necesaria para la integración con los servicios del laboratorio.
-
-
-<img src="ip_ubuntu.jpg" width="900">)
+<img src="ip_ubuntu.jpg" width="900">
 **Nodo Manager (Ubuntu):**
-**Verificación de Red (Servidor Host - Ubuntu)**
-**Comando ejecutado:ip a**
+**Comando ejecutado:** `ip a`
+**Resultado:** Interfaz activa con IP 192.168.0.173 asignada.
 
-**Resultado:** El sistema confirmó la interfaz física enp2s0 activa con la dirección IP 192.168.0.179 asignada mediante DHCP. Esta dirección IP servirá como punto central para la gestión y despliegue de los agentes del laboratorio (Wazuh).
+<img src="Validación de IP Ubuntu Server.jpg" width="900">
+**Nodo Agente (Windows 7):**
+**Comando utilizado:** `ip a`
+**Resultado:** Se confirma la asignación dinámica de la dirección IP.
+
+---
+
+## 3. Gestión Remota (SSH)
+Para trabajar de forma profesional y evitar el uso constante de la interfaz gráfica de VirtualBox, he configurado acceso vía **SSH (Secure Shell)**. Esto me permite tomar el control total de la máquina virtual desde mi terminal local.
+
+**Identificación Visual del Entorno:**
+Para evitar errores operativos, he diferenciado mi entorno local de mi entorno remoto mediante perfiles de color en la terminal.
+
+<img src="ssh-remote-management-setup.png" width="900">
+*Descripción: Diferenciación visual entre mi PC Real (izquierda) y el servidor remoto (derecha).*
+
+---
 
 <h2>Fase 2: Despliegue de Wazuh Manager</h2>
 <p>Se ha completado la instalación de Wazuh Manager y Dashboard en un entorno Ubuntu. 
@@ -49,24 +48,3 @@ A continuación se muestra la interfaz operativa del sistema:</p>
 </div>
 
 <p><em>En estas capturas se observa el panel de control centralizado tras la finalización del asistente de instalación.</em></p>
- 
-
- ### Administración Remota (SSH)
-Para facilitar la gestión y el despliegue del laboratorio, se configuró el acceso remoto mediante SSH en el nodo endpoint.
-
-* **Estado:** Configurado y activo.
-* **Comandos ejecutados:**
-    * `sudo systemctl start ssh`
-    * `sudo systemctl enable ssh`
-* **Evidencia:** ![Estado del servicio SSH](red_vm.png)
-* **Nota:** El servicio se encuentra en estado `active (running)`, permitiendo la administración remota desde el equipo principal.
-
-
-Gestión Remota (SSH)
-
-Para trabajar como un profesional y evitar el desgaste de escribir comandos directamente en la ventana de VirtualBox, configuré el acceso vía SSH (Secure Shell).
-
-SSH es un protocolo que me permite "tomar el control" de mi máquina virtual desde la terminal de mi propia PC. En lugar de usar la interfaz de la VM, me conecto a ella de forma remota y segura. Esto es vital en un SOC real; de esta manera puedo copiar, pegar comandos y extraer logs de forma rápida y sin errores.
-
-  
-Nota: Ahora mi terminal principal tiene control total sobre el servidor, permitiéndome instalar el agente de Wazuh de forma eficiente.
