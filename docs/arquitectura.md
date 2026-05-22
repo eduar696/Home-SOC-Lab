@@ -26,7 +26,7 @@ Nota: El entorno utiliza asignación dinámica de IPs (DHCP) para fines de prueb
 <img src="Validación de IP Ubuntu Server.jpg" width="900">)
 
 **Nodo Manager (Ubuntu):**
-<img src="ip_ubuntu.jpg" width="600">)
+<img src="ip_ubuntu.jpg" width="900">)
 
 
 <h2>Fase 2: Despliegue de Wazuh Manager</h2>
