@@ -45,8 +45,8 @@ Para evitar errores operativos, he diferenciado mi entorno local de mi entorno r
 A continuación se muestra la interfaz operativa del sistema:</p>
 
 <div style="display: flex; gap: 10px; margin-bottom: 20px;">
-    <img src="wazuh_dashboard_ready1.png" alt="Wazuh Dashboard Vista 1" width="45%">
-    <img src="wazuh_dashboard_ready2.png" alt="Wazuh Dashboard Vista 2" width="45%">
+    <img src="wazuh_dashboard_ready1.png" alt="wazuh dashboard ready1" width="45%">
+    <img src="wazuh_dashboard_ready2.png" alt="wazuh dashboard Vista 2" width="45%">
 </div>
 
 <p><em>En estas capturas se observa el panel de control centralizado tras la finalización del asistente de instalación.</em></p>
