@@ -8,7 +8,7 @@ El laboratorio está compuesto por dos nodos principales conectados en una red l
 - **Nodo Agente (Windows 7):**
   - IP:162.168.0.188
   - Función: Endpoint de monitoreo y generación de eventos.
-
+Nota: Las direcciones IP asignadas son dinámicas (DHCP) y fueron validadas durante la configuración inicial de los equipos.
 
 ## Validación de Conectividad
 Se ha verificado la comunicación bidireccional entre el Nodo Manager y el Nodo Agente mediante pruebas de ICMP (ping).
