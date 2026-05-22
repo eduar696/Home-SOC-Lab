@@ -23,7 +23,7 @@ Se ha verificado la comunicación bidireccional entre el Nodo Manager y el Nodo 
 
 **Nodo Agente (Windows 7):
 Nota: El entorno utiliza asignación dinámica de IPs (DHCP) para fines de pruebas**
-<img src="Validación de IP Ubuntu Server.jpg" width="600">)
+<img src="Validación de IP Ubuntu Server.jpg" width="500">)
 
 **Nodo Manager (Ubuntu):**
 <img src="ip_ubuntu.jpg" width="600">)
