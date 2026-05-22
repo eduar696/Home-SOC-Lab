@@ -49,5 +49,14 @@ A continuación se muestra la interfaz operativa del sistema:</p>
 </div>
 
 <p><em>En estas capturas se observa el panel de control centralizado tras la finalización del asistente de instalación.</em></p>
+ 
 
+ ### Administración Remota (SSH)
+Para facilitar la gestión y el despliegue del laboratorio, se configuró el acceso remoto mediante SSH en el nodo endpoint.
 
+* **Estado:** Configurado y activo.
+* **Comandos ejecutados:**
+    * `sudo systemctl start ssh`
+    * `sudo systemctl enable ssh`
+* **Evidencia:** ![Estado del servicio SSH](red_vm.png)
+* **Nota:** El servicio se encuentra en estado `active (running)`, permitiendo la administración remota desde el equipo principal.
