@@ -24,11 +24,11 @@ Se ha verificado la comunicación bidireccional entre el Nodo Manager y el Nodo 
 
 
 <img src="Validación de IP Ubuntu Server.jpg" width="900">)
-             **Nodo Agente (Windows 7)**
+**Nodo Agente (Windows 7)**
 
-Comando utilizado: ip a (utilizado para listar las interfaces de red y verificar la configuración IP asignada).
+**Comando utilizado:** ip a (utilizado para listar las interfaces de red y verificar la configuración IP asignada).
 
-Resultado: Se confirma la asignación dinámica de la dirección IP 192.168.0.173 a través del protocolo DHCP, estableciendo la comunicación necesaria para la integración con los servicios del laboratorio.
+**Resultado:** Se confirma la asignación dinámica de la dirección IP 192.168.0.173 a través del protocolo DHCP, estableciendo la comunicación necesaria para la integración con los servicios del laboratorio.
 
 **Nodo Manager (Ubuntu):**
 <img src="ip_ubuntu.jpg" width="800">)
