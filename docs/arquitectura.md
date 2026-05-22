@@ -30,9 +30,9 @@ Se ha verificado la comunicación bidireccional entre el Nodo Manager y el Nodo 
 
 **Resultado:** Se confirma la asignación dinámica de la dirección IP 192.168.0.173 a través del protocolo DHCP, estableciendo la comunicación necesaria para la integración con los servicios del laboratorio.
 
-**Nodo Manager (Ubuntu):**
-<img src="ip_ubuntu.jpg" width="900">)
 
+<img src="ip_ubuntu.jpg" width="900">)
+**Nodo Manager (Ubuntu):**
 
 <h2>Fase 2: Despliegue de Wazuh Manager</h2>
 <p>Se ha completado la instalación de Wazuh Manager y Dashboard en un entorno Ubuntu. 
