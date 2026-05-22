@@ -16,7 +16,7 @@ Se ha verificado la comunicación bidireccional entre el Nodo Manager y el Nodo 
 
 ### Evidencia de Configuración de Red
 <img src="ip_ubuntu.jpg" width="900">
-**Nodo Manager (Ubuntu):**
+**Nodo Manager (Ubuntu):
 **Comando ejecutado:** `ip a`
 **Resultado:** Interfaz activa con IP 192.168.0.173 asignada.
 
