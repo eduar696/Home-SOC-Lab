@@ -5,8 +5,8 @@ El laboratorio está compuesto por dos nodos principales conectados en una red l
 
 - **Nodo Manager (Ubuntu Server):** - IP: 192.168.0.173
   - Función: Wazuh Manager, Servidor de Logs, Dashboard.
-- **Nodo Agente (Windows 7):**
-  - IP: 192.168.0.188
+- **Nodo Agente (Ubuntu Server):**
+  - IP: 192.168.0.173
   - Función: Endpoint de monitoreo y generación de eventos.
 
 **Nota: Las direcciones IP asignadas son dinámicas (DHCP) y fueron validadas durante la configuración inicial de los equipos.**
@@ -23,7 +23,7 @@ Se ha verificado la comunicación bidireccional entre el Nodo Manager y el Nodo 
 **Resultado:** Interfaz activa con IP 192.168.0.173 asignada.
 
 <img src="Validación de IP Ubuntu Server.jpg" width="900">
-**Nodo Agente (Windows 7):**
+**Nodo Agente (Ubuntu Server):**
 **Comando utilizado:** `ip a`
 **Resultado:** Se confirma la asignación dinámica de la dirección IP.
 
