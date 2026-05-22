@@ -24,7 +24,7 @@ Se ha verificado la comunicación bidireccional entre el Nodo Manager y el Nodo 
 
 
 <img src="Validación de IP Ubuntu Server.jpg" width="900">)
-**Nodo Agente (Windows 7)**
+             **Nodo Agente (Windows 7)**
 
 Comando utilizado: ip a (utilizado para listar las interfaces de red y verificar la configuración IP asignada).
 
