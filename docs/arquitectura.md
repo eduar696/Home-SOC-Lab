@@ -36,7 +36,7 @@ Para trabajar de forma profesional y evitar el uso constante de la interfaz grá
 Para evitar errores operativos, he diferenciado mi entorno local de mi entorno remoto mediante perfiles de color en la terminal.
 
 <img src="ssh-remote-management-setup.png" width="900">
-**Descripción: Diferenciación visual entre mi PC Real (izquierda) y el servidor remoto (derecha).**
+Descripción: Diferenciación visual entre mi PC Real (izquierda) y el servidor remoto (derecha).
 
 ---
 
