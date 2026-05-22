@@ -28,18 +28,6 @@ Se ha verificado la comunicación bidireccional entre el Nodo Manager y el Nodo 
 **Resultado:** Se confirma la asignación dinámica de la dirección IP.
 
 ---
-
-## 3. Gestión Remota (SSH)
-Para trabajar de forma profesional y evitar el uso constante de la interfaz gráfica de VirtualBox, he configurado acceso vía **SSH (Secure Shell)**. Esto me permite tomar el control total de la máquina virtual desde mi terminal local.
-
-**Identificación Visual del Entorno:**
-Para evitar errores operativos, he diferenciado mi entorno local de mi entorno remoto mediante perfiles de color en la terminal.
-
-<img src="ssh-remote-management-setup.png" width="900">
-Descripción: Diferenciación visual entre mi PC Real (izquierda) y el servidor remoto (derecha).
-
----
-
 <h2>Fase 2: Despliegue de Wazuh Manager</h2>
 <p>Se ha completado la instalación de Wazuh Manager y Dashboard en un entorno Ubuntu. 
 A continuación se muestra la interfaz operativa del sistema:</p>
@@ -50,3 +38,13 @@ A continuación se muestra la interfaz operativa del sistema:</p>
 </div>
 
 <p><em>En estas capturas se observa el panel de control centralizado tras la finalización del asistente de instalación.</em></p>
+---
+
+## 3. Gestión Remota (SSH)
+Para trabajar de forma profesional y evitar el uso constante de la interfaz gráfica de VirtualBox, he configurado acceso vía **SSH (Secure Shell)**. Esto me permite tomar el control total de la máquina virtual desde mi terminal local.
+
+**Identificación Visual del Entorno:**
+Para evitar errores operativos, he diferenciado mi entorno local de mi entorno remoto mediante perfiles de color en la terminal.
+
+<img src="ssh-remote-management-setup.png" width="900">
+Descripción: Diferenciación visual entre mi PC Real (izquierda) y el servidor remoto (derecha).
