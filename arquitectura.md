@@ -21,14 +21,21 @@ Se ha verificado la comunicación bidireccional entre el Nodo Manager y el Nodo 
 
 ---
 
-## 3. Despliegue de Wazuh Manager
-Tras la configuración inicial de red, procedí con la instalación de Wazuh Manager y Dashboard en el entorno Ubuntu. A continuación, el estado operativo del sistema:
+---
 
-<div style="display: flex; gap: 10px;">
+## 3. Despliegue de Wazuh Manager
+Tras la configuración inicial de red, procedí con la instalación de Wazuh Manager y Dashboard. El sistema se encuentra operativo, con todos los servicios de análisis y correlación activos:
+
+<div style="display: flex; gap: 10px; margin-bottom: 20px;">
     <img src="docs/wazuh_dashboard_ready1.png" width="45%">
     <img src="docs/wazuh_dashboard_ready2.png" width="45%">
 </div>
 
+### Validación del Servicio (Backend)
+Para confirmar la integridad del servicio a nivel de sistema, verifiqué el estado operativo del `wazuh-manager`:
+
+<img src="docs/running.png" width="900">
+*Descripción: Estado activo (running) del servicio wazuh-manager mediante systemctl.*
 ---
 
 ---
