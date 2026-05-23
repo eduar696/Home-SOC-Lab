@@ -3,13 +3,13 @@
 ## 1. Topología de Red
 El laboratorio está compuesto por dos nodos principales conectados en una red local virtualizada/física.
 
-- **Nodo Manager (Ubuntu Server):** - IP: 192.168.0.173
-  - Función: Wazuh Manager, Servidor de Logs, Dashboard.
+- **Nodo Manager (Ubuntu Server):** - **IP:** 192.168.0.173
+  - **Función:** Wazuh Manager, Servidor de Logs, Dashboard.
 - **Nodo Agente (Ubuntu Server):**
-  - IP: 192.168.0.xxx (Asegúrate de colocar aquí la IP real de tu agente)
-  - Función: Endpoint de monitoreo y generación de eventos.
+  - **IP:** 192.168.0.xxx (Asegúrate de colocar la IP real de tu agente)
+  - **Función:** Endpoint de monitoreo y generación de eventos.
 
-**Nota: Las direcciones IP asignadas son dinámicas (DHCP) y fueron validadas durante la configuración inicial de los equipos.**
+**Nota:** Las direcciones IP asignadas son dinámicas (DHCP) y fueron validadas durante la configuración inicial de los equipos.
 
 ## 2. Validación de Conectividad
 Se ha verificado la comunicación bidireccional entre el Nodo Manager y el Nodo Agente.
@@ -24,19 +24,10 @@ Se ha verificado la comunicación bidireccional entre el Nodo Manager y el Nodo 
 
 <img src="docs/Validación de IP Ubuntu Server.jpg" width="900">
 **Nodo Agente (Ubuntu Server):**
+
 **Comando utilizado:** `ip a`
+
 **Resultado:** Se confirma la asignación dinámica de la dirección IP.
-
----
-
-## 3. Gestión Remota (SSH)
-Para trabajar de forma profesional y evitar el uso constante de la interfaz gráfica de VirtualBox, he configurado acceso vía **SSH (Secure Shell)**. Esto me permite tomar el control total de la máquina virtual desde mi terminal local.
-
-**Identificación Visual del Entorno:**
-Para evitar errores operativos, he diferenciado mi entorno local de mi entorno remoto mediante perfiles de color en la terminal.
-
-<img src="docs/ssh-remote-management-setup.png" width="900">
-*Descripción: Diferenciación visual entre mi PC Real (izquierda) y el servidor remoto (derecha).*
 
 ---
 
@@ -50,3 +41,14 @@ A continuación se muestra la interfaz operativa del sistema:</p>
 </div>
 
 <p><em>En estas capturas se observa el panel de control centralizado tras la finalización del asistente de instalación.</em></p>
+
+---
+
+## 3. Gestión Remota (SSH)
+Para trabajar de forma profesional y evitar el uso constante de la interfaz gráfica de VirtualBox, he configurado acceso vía **SSH (Secure Shell)**. Esto me permite tomar el control total de la máquina virtual desde mi terminal local.
+
+**Identificación Visual del Entorno:**
+Para evitar errores operativos, he diferenciado mi entorno local de mi entorno remoto mediante perfiles de color en la terminal.
+
+<img src="docs/ssh-remote-management-setup.png" width="900">
+*Descripción: Diferenciación visual entre mi PC Real (izquierda) y el servidor remoto (derecha).*
