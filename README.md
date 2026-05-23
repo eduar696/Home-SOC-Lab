@@ -6,7 +6,8 @@ Desarrollo de un entorno SOC de nivel profesional enfocado en la visibilidad de 
 🛠️ Infraestructura Desplegada
 
 Para el desarrollo del entorno, se ha implementado un servidor Wazuh (All-in-one) sobre una instancia virtualizada, centralizando las capacidades de seguridad en un único nodo de gestión.
-Componentes de Gestión
+
+## Componentes de Gestión:
 
     Wazuh Manager: Motor de correlación, análisis de logs y gestión de vulnerabilidades.
 
