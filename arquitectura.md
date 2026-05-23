@@ -31,8 +31,19 @@ Tras la configuración inicial de red, procedí con la instalación de Wazuh Man
 
 ---
 
+---
+
 ## 4. Gestión Remota (SSH)
-Posterior a la instalación, configuré el acceso vía **SSH (Secure Shell)** para optimizar la gestión del laboratorio desde mi terminal local, evitando el uso constante de la interfaz gráfica de VirtualBox.
+Posterior a la instalación de Wazuh, configuré el acceso vía **SSH (Secure Shell)** para optimizar la gestión del laboratorio.
+
+### Paso 1: Configuración del Servicio
+Primero instalé y habilité el servicio SSH en el servidor Ubuntu para permitir conexiones seguras:
+
+<img src="docs/red_vm.png" width="900">
+*Descripción: Instalación, inicio y habilitación del servicio SSH para persistencia en el arranque.*
+
+### Paso 2: Acceso y Gestión
+Una vez configurado, establecí la gestión remota desde mi terminal local:
 
 <img src="docs/ssh-remote-management-setup.png" width="900">
 *Descripción: Diferenciación visual entre mi PC Real (izquierda) y el servidor remoto (derecha) mediante perfiles de color.*
