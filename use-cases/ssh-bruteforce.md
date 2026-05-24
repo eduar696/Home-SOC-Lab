@@ -9,47 +9,47 @@ Simulé y detecté un ataque de Fuerza Bruta SSH contra un punto final Linux mon
 
 ## Attack Simulation
 Se generaron manualmente múltiples intentos fallidos de inicio de sesión SSH desde la estación de trabajo del SOC contra el punto final monitoreado 192.168.0.173 utilizando una cuenta de usuario inexistente (raulxi).
-Attack Command:`ssh raulxi@192.168.0.173`
+
+**Attack Command:**
+`ssh raulxi@192.168.0.173`
+
 Se provocaron intencionadamente varios fallos de autenticación para simular intentos de acceso no autorizados.
 
 ## Detection and Analysis 
-
-![Análisis de fuerza bruta SSH](../evidence/screenshots/nombre-de-tu-imagen.png)
-
 Wazuh recopiló y analizó correctamente los registros de autenticación del servidor Ubuntu monitorizado.
 
 El SIEM generó alertas relacionadas con:
-
-- failed authentication attempts
+- Failed authentication attempts
 - PAM authentication events
-- login session activity
-- agent monitoring events
-- Relevant Findings
-- ource Target: 192.168.0.173
-- Attack Type: SSH Brute Force Attempt
-- Authentication Status: Failed
-- Detection Source: Wazuh Agent
-- Monitored Endpoint: soc-endpoint
+- Login session activity
+- Agent monitoring events
 
- ## SOC Investigation
+### Relevant Findings
+- **Source Target:** 192.168.0.173
+- **Attack Type:** SSH Brute Force Attempt
+- **Authentication Status:** Failed
+- **Detection Source:** Wazuh Agent
+- **Monitored Endpoint:** soc-endpoint
+
+## SOC Investigation
 El SOC detectó repetidos intentos fallidos de inicio de sesión en servicios SSH, lo que indica una posible actividad de fuerza bruta.
 
 Los intentos de autenticación utilizaron una cuenta no válida, lo que podría indicar:
-
- - unauthorized access attempts
- - credential guessing
- - reconnaissance behavior
+- Unauthorized access attempts
+- Credential guessing
+- Reconnaissance behavior
 
 El evento se registró correctamente y es visible en el panel de control de Wazuh para su posterior investigación.
 
 ## Mapeo MITRE ATT&CK
-
-T1110 — Ataque de fuerza bruta
-
-T1078 — Cuentas válidas (intento realizado)
+- **T1110** — Ataque de fuerza bruta
+- **T1078** — Cuentas válidas (intento realizado)
 
 ## Result 
-
 El laboratorio SOC doméstico detectó y registró con éxito actividad de autenticación SSH sospechosa utilizando Wazuh SIEM.
 
-
+## Evidence
+<p align="center">
+  <img src="../evidence/screenshots/Vista%20del%20atacante%20(terminal%20mv).png" width="48%" alt="Vista del Atacante" />
+  <img src="../evidence/screenshots/Vista%20del%20Analista%20SOC%20(SIEM%20WAZUH).png" width="48%" alt="Vista del Analista SOC" />
+</p>
