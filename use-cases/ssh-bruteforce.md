@@ -42,7 +42,7 @@ Los intentos de autenticación utilizaron una cuenta no válida, lo que podría 
 
 El evento se registró correctamente y es visible en el panel de control de Wazuh para su posterior investigación.
 
-Mapeo MITRE ATT&CK
+## Mapeo MITRE ATT&CK
 
 T1110 — Ataque de fuerza bruta
 
