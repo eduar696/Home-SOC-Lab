@@ -21,3 +21,7 @@ El entorno fue diseñado bajo un esquema de **virtualización eficiente**, optim
 ## 📁 Documentación Técnica
 Para ver la topología de red detallada, configuración de IPs y evidencias de validación de servicios, consulta el archivo:
 [**Ver Arquitectura del Lab**](arquitectura.md)
+
+## Navegación del Proyecto
+- 🛠️ [Configuración de Arquitectura e Infraestructura](arquitectura.md)
+- 🚨 [Caso de Uso: Detección de Ataque de Fuerza Bruta SSH](use-cases/ssh-bruteforce.md)
