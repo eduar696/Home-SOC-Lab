@@ -54,3 +54,6 @@ Una vez configurado, establecí la gestión remota desde mi terminal local:
 
 <img src="docs/ssh-remote-management-setup.png" width="900">
 *Descripción: Diferenciación visual entre mi PC Real (izquierda) y el servidor remoto (derecha) mediante perfiles de color.*
+
+---
+[⬅️ Volver a la Portada Principal](README.md)
