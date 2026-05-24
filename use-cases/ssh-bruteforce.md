@@ -1,7 +1,7 @@
 # SSH Brute Force Detection
 
 ## Objective
-Simulé y detecté un ataque de fuerza bruta SSH contra un punto final Linux monitorizado utilizando Wazuh SIEM.
+Simulé y detecté un ataque de Fuerza Bruta SSH contra un punto final Linux monitorizado utilizando Wazuh SIEM.
 
 ## Tools
 - Wazuh Manager & Agent (v4.9.1)
