@@ -52,4 +52,4 @@ El laboratorio SOC doméstico detectó y registró con éxito actividad de auten
 
 | Vista del Atacante (Terminal) | Vista del Analista SOC (SIEM Wazuh) |
 | :---: | :---: |
-| ![Vista del Atacante](../evidence/screenshots/Vista%20del%20atacante%20(terminal%20mv).png) | ![Vista del Analista SOC](../evidence/screenshots/Vista%20del%20Analista%20SOC%20(SIEM%20WAZUH).png) |
+| ![Vista del Atacante](../evidence/screenshots/ataque.png) | ![Vista del Analista SOC](../evidence/screenshots/wazuh.png) |
