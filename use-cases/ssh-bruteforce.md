@@ -49,11 +49,11 @@ El evento se registró correctamente y es visible en el panel de control de Wazu
 El laboratorio SOC doméstico detectó y registró con éxito actividad de autenticación SSH sospechosa utilizando Wazuh SIEM.
 
 
----
-[⬅️ Volver a la Portada Principal](../README.md)
-
 ## Evidence
 
 | Vista del Atacante (Terminal) | Vista del Analista SOC (SIEM Wazuh) |
 | :---: | :---: |
 | ![Vista del Atacante](https://github.com/eduar696/Home-SOC-Lab/raw/main/evidence/ataque.png) | ![Vista del Analista SOC](https://github.com/eduar696/Home-SOC-Lab/raw/main/evidence/wazuh.png) |
+
+---
+[⬅️ Volver a la Portada Principal](../README.md)
