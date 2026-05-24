@@ -1,59 +1,30 @@
-# Arquitectura del SOC Lab
+# Arquitectura e Infraestructura del Laboratorio SOC
 
-## 1. Topología de Red
-El laboratorio está compuesto por dos nodos principales conectados en una red local virtualizada.
+## 1. Resumen del Entorno
+Este laboratorio ha sido diseñado con el propósito de centralizar la telemetría, logs y eventos de seguridad de endpoints distribuidos, permitiendo el análisis de comportamiento defensivo (Blue Teaming) y la ingeniería de detección frente a tácticas de adversarios.
 
-- **Nodo Manager (Ubuntu Server):** - **IP:** 192.168.0.173
-  - **Función:** Wazuh Manager, Servidor de Logs, Dashboard.
-- **Nodo Agente (Ubuntu Server):**
-  - **IP:** 192.168.0.xxx (Recuerda actualizar con la IP real)
-  - **Función:** Endpoint de monitoreo y generación de eventos.
+## 2. Componentes de la Red e Infraestructura
 
-## 2. Validación de Conectividad
-Se ha verificado la comunicación bidireccional entre el Nodo Manager y el Nodo Agente.
+El laboratorio utiliza un direccionamiento estático privado y se compone de los siguientes nodos virtuales:
 
-### Evidencia de Configuración
-<img src="docs/ip_ubuntu.jpg" width="900">
-*Nodo Manager (Ubuntu): Comando `ip a`*
+| Rol del Nodo | Sistema Operativo | Dirección IP | Software / Rol Principal |
+| :--- | :--- | :--- | :--- |
+| **SIEM Server** | Linux / Host Principal | `192.168.0.179` | Wazuh Manager (v4.9.1) & Dashboard |
+| **Monitored Endpoint** | Ubuntu Server 20.04 | `192.168.0.173` | Wazuh Agent (v4.9.1) / Servidor supervisado |
+| **Attack Station** | Linux / Host Principal | `192.168.0.179` | Simulación de ataque lanzada desde la CLI local |
+## 3. Configuración y Despliegue del Agente
 
-<img src="docs/Validación de IP Ubuntu Server.jpg" width="900">
-*Nodo Agente (Ubuntu): Comando `ip a`*
+Para lograr la visibilidad completa del endpoint supervisado (`soc-endpoint`), se realizaron los siguientes pasos de integración:
 
----
+1. **Instalación del Agente:** Se desplegó el agente oficial de Wazuh mediante la CLI apuntando hacia la IP central del SIEM Manager.
+2. **Activación de Servicios:** Se configuró el servicio del agente para iniciar de forma automática junto al sistema (`systemctl enable wazuh-agent`).
+3. **Validación de Telemetría:** Se comprobó que el flujo de logs (`syslog`, `auth.log`) se estuviese enviando correctamente mediante la verificación de la directiva `Logcollector` en las propiedades del agente.
 
----
-
-## 3. Despliegue de Wazuh Manager
-Tras la configuración inicial de red, procedí con la instalación de Wazuh Manager y Dashboard. El sistema se encuentra operativo, con todos los servicios de análisis y correlación activos:
-
-<div style="display: flex; gap: 10px; margin-bottom: 20px;">
-    <img src="docs/wazuh_dashboard_ready1.png" width="45%">
-    <img src="docs/wazuh_dashboard_ready2.png" width="45%">
-</div>
-
-### Validación del Servicio (Backend)
-Para confirmar la integridad del servicio a nivel de sistema, verifiqué el estado operativo del `wazuh-manager`:
-
-<img src="docs/running.png" width="900">
-*Descripción: Estado activo (running) del servicio wazuh-manager mediante systemctl.*
----
-
----
-
-## 4. Gestión Remota (SSH)
-Posterior a la instalación de Wazuh, configuré el acceso vía **SSH (Secure Shell)** para optimizar la gestión del laboratorio.
-
-### Paso 1: Configuración del Servicio
-Primero instalé y habilité el servicio SSH en el servidor Ubuntu para permitir conexiones seguras:
-
-<img src="docs/red_vm.png" width="900">
-*Descripción: Instalación, inicio y habilitación del servicio SSH para persistencia en el arranque.*
-
-### Paso 2: Acceso y Gestión
-Una vez configurado, establecí la gestión remota desde mi terminal local:
-
-<img src="docs/ssh-remote-management-setup.png" width="900">
-*Descripción: Diferenciación visual entre mi PC Real (izquierda) y el servidor remoto (derecha) mediante perfiles de color.*
+## 4. Capacidades de Monitorización Activas
+Actualmente, el agente configurado en el servidor recopila y envía alertas automatizadas en tiempo real sobre los siguientes vectores esenciales:
+- Intentos de autenticación del sistema (Éxitos / Fallos de SSH).
+- Eventos críticos del módulo de autenticación PAM.
+- Monitorización de integridad de archivos críticos del sistema (FIM).
 
 ---
 [⬅️ Volver a la Portada Principal](README.md)
