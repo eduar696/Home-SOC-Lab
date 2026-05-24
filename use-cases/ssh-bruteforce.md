@@ -1,23 +1,53 @@
 # SSH Brute Force Detection
 
 ## Objective
-Detect multiple failed SSH login attempts.
+Simulé y detecté un ataque de fuerza bruta SSH contra un punto final Linux monitorizado utilizando Wazuh SIEM.
 
 ## Tools
-- Wazuh Agent/Manager
-- Ubuntu Server
+- Wazuh Manager & Agent (v4.9.1)
+- Ubuntu Server 20.04
 
 ## Attack Simulation
-`ssh invaliduser@192.168.x.x` (ejecutado 5+ veces).
+Se generaron manualmente múltiples intentos fallidos de inicio de sesión SSH desde la estación de trabajo del SOC contra el punto final monitoreado 192.168.0.173 utilizando una cuenta de usuario inexistente (raulxi).
+Attack Command:`ssh raulxi@192.168.0.173`
+Se provocaron intencionadamente varios fallos de autenticación para simular intentos de acceso no autorizados.
 
-## Detection
-Wazuh rule 5710 (SSH brute force attempt) triggered.
+## Detection and Analysis 
 
-## Evidence
-[Screenshot del Dashboard]
+Wazuh recopiló y analizó correctamente los registros de autenticación del servidor Ubuntu monitorizado.
 
-## MITRE ATT&CK
-T1110 - Brute Force
+El SIEM generó alertas relacionadas con:
 
-## Result
-SOC successfully detected suspicious activity.
+- failed authentication attempts
+- PAM authentication events
+- login session activity
+- agent monitoring events
+- Relevant Findings
+- ource Target: 192.168.0.173
+- Attack Type: SSH Brute Force Attempt
+- Authentication Status: Failed
+- Detection Source: Wazuh Agent
+- Monitored Endpoint: soc-endpoint
+
+ ## SOC Investigation
+El SOC detectó repetidos intentos fallidos de inicio de sesión en servicios SSH, lo que indica una posible actividad de fuerza bruta.
+
+Los intentos de autenticación utilizaron una cuenta no válida, lo que podría indicar:
+
+ - unauthorized access attempts
+ - credential guessing
+ - reconnaissance behavior
+
+El evento se registró correctamente y es visible en el panel de control de Wazuh para su posterior investigación.
+
+Mapeo MITRE ATT&CK
+
+T1110 — Ataque de fuerza bruta
+
+T1078 — Cuentas válidas (intento realizado)
+
+## Result 
+
+El laboratorio SOC doméstico detectó y registró con éxito actividad de autenticación SSH sospechosa utilizando Wazuh SIEM.
+
+
