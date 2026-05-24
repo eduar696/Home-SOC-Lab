@@ -14,6 +14,8 @@ Se provocaron intencionadamente varios fallos de autenticación para simular int
 
 ## Detection and Analysis 
 
+![Análisis de fuerza bruta SSH](../evidence/screenshots/nombre-de-tu-imagen.png)
+
 Wazuh recopiló y analizó correctamente los registros de autenticación del servidor Ubuntu monitorizado.
 
 El SIEM generó alertas relacionadas con:
