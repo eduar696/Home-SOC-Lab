@@ -12,6 +12,7 @@ El laboratorio utiliza un direccionamiento estático privado y se compone de los
 | **SIEM Server** | Linux / Host Principal | `192.168.0.179` | Wazuh Manager (v4.9.1) & Dashboard |
 | **Monitored Endpoint** | Ubuntu Server 20.04 | `192.168.0.173` | Wazuh Agent (v4.9.1) / Servidor supervisado |
 | **Attack Station** | Linux / Host Principal | `192.168.0.179` | Simulación de ataque lanzada desde la CLI local |
+
 ## 3. Configuración y Despliegue del Agente
 
 Para lograr la visibilidad completa del endpoint supervisado (`soc-endpoint`), se realizaron los siguientes pasos de integración:
