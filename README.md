@@ -18,10 +18,6 @@ El entorno fue diseñado bajo un esquema de **virtualización eficiente**, optim
 - **Entorno:** Desplegado mediante máquinas virtuales (Ubuntu Server) para simular un ecosistema de seguridad real con recursos controlados.
 - **Alcance:** Implementación integral enfocada en la visibilidad de logs, monitoreo de eventos y configuración de agentes.
 
-## 📁 Documentación Técnica
-Para ver la topología de red detallada, configuración de IPs y evidencias de validación de servicios, consulta el archivo:
-[**Ver Arquitectura del Lab**](arquitectura.md)
-
 ## Navegación del Proyecto
 - 🛠️ [Configuración de Arquitectura e Infraestructura](arquitectura.md)
 - 🚨 [Caso de Uso: Detección de Ataque de Fuerza Bruta SSH](use-cases/ssh-bruteforce.md)
