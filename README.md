@@ -22,10 +22,10 @@ Para conocer en detalle el direccionamiento IP, el mapa de red, los requisitos d
 ## 🚨 Executed Use Cases (Casos de Uso Detectados)
 A continuación se detallan las investigaciones de incidentes reales simulados en el laboratorio, analizados desde la perspectiva de un analista de seguridad de Nivel 1/2:
 
-1. [**Detección de Ataque de Fuerza Bruta SSH**] 
+1. [**Detección de Ataque de Fuerza Bruta SSH**](use-cases/ssh-bruteforce.md)
    - **Enfoque:** Análisis de fallos de autenticación PAM, ráfagas de tráfico SSH y alertas críticas de nivel 10 en Wazuh frente a ataques de adivinación de credenciales.
    - **Framework:** Mapeo directo con MITRE ATT&CK T1110 (Brute Force).
-(use-cases/ssh-bruteforce.md)
+
 ---
 
 ## Skills Demonstrated
