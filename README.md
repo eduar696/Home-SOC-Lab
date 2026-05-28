@@ -4,16 +4,14 @@
 Este proyecto consiste en el diseño, despliegue y configuración de un **Laboratorio SOC Doméstico** de nivel profesional. El objetivo principal es simular entornos corporativos reales para la monitorización de infraestructura, recolección centralizada de logs, análisis de telemetría y detección de actividades maliciosas (ataques) mediante reglas de correlación.
 
 ## Project Architecture
-El laboratorio está estructurado bajo un modelo de monitorización centralizada y administración remota por CLI, donde se evalúa el comportamiento de un endpoint frente a vectores de ataque dirigidos al servidor central:
+El laboratorio está estructurado bajo un modelo de monitorización defensiva y simulación de adversarios por CLI (Interfaz de Línea de Comandos):
 
-* **SIEM / Central Management (Victim):** Sistema Anfitrión (Mi PC Real - Ubuntu Desktop con entorno local configurado). Aloja el núcleo del SIEM (**Wazuh Manager v4.9.1**) encargado de la recepción, decodificación y correlación de eventos. En el flujo del laboratorio, este sistema actúa como el objetivo receptor de los intentos de acceso.
+* **SIEM / Central Management:** Sistema Anfitrión (Mi PC Real - Ubuntu Desktop `soc-lab`). Aloja el núcleo del SIEM (**Wazuh Manager v4.9.1**) encargado de centralizar, decodificar y correlacionar los logs de seguridad recibidos.
   
-* **Monitored Endpoint & Attack Station:** Servidor virtualizado (**Ubuntu Server**). Se encuentra protegido y monitorizado activamente mediante un agente ligero de Wazuh para la recolección de logs críticos (`syslog`, `auth.log`, PAM). Para los propósitos del ejercicio, esta máquina actúa simultáneamente como el origen del ataque, ejecutando simulaciones de adversarios (como fuerza bruta SSH con usuarios existentes e inexistentes) dirigidas hacia el SIEM.
+* **Monitored Endpoint (Victim):** Servidor virtualizado (**Ubuntu Server `soc-endpoint`** con IP `192.168.0.173`). Operando en segundo plano, está protegido con el agente de Wazuh para auditar y enviar registros críticos del sistema (`syslog`, `auth.log`, PAM) hacia el manejador.
   
-* **Flujo de Trabajo y Control Remoto:** Toda la actividad se gestionó desde el entorno gráfico de la PC Real mediante el uso de terminales concurrentes. Se estableció una conexión SSH hacia la máquina virtual utilizando perfiles de color diferenciados (Fondo Azul para la terminal remota del Endpoint / Fondo Morado para la terminal local del SIEM) para operar, ejecutar los ataques y monitorizar los registros de forma ágil sin necesidad de interactuar con la interfaz de VirtualBox.
+* **Attack Station & Control Remoto:** Flujo gestionado mediante terminales concurrentes con perfiles de color diferenciados. Se utilizó la consola local (Fondo Morado) como la estación de ataque para lanzar vectores de fuerza bruta SSH dirigidos al endpoint. En paralelo, se mantuvo una terminal remota (Fondo Azul) para auditar el estado interno del servidor víctima de forma eficiente.
   
-
-
 ---
 
 ## 🛠️ Infrastructure Documentation
