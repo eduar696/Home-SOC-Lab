@@ -25,7 +25,7 @@ A continuación se detallan las investigaciones de incidentes reales simulados e
 1. [**Detección de Ataque de Fuerza Bruta SSH**] 
    - **Enfoque:** Análisis de fallos de autenticación PAM, ráfagas de tráfico SSH y alertas críticas de nivel 10 en Wazuh frente a ataques de adivinación de credenciales.
    - **Framework:** Mapeo directo con MITRE ATT&CK T1110 (Brute Force).
-
+(use-cases/ssh-bruteforce.md)
 ---
 
 ## Skills Demonstrated
